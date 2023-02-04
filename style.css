@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 411px;
+  height: 411px;
+  margin: 0, auto;
+  padding: 20px 36px 24px 30px;
+  background: radial-gradient(
+    circle at top,
+    hsl(215, 25%, 19%),
+    hsl(215, 25%, 14%)
+  );
+}
+.star {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+  background-image: url("./images/icon-star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+p {
+  color: hsl(216, 12%, 54%);
+  margin: 0;
+  padding-top: 13px;
+  line-height: 1.5rem;
+}
+
+/* **********Start: Rating Bu ttons ********** */
+.btn-rating {
+  display: flex;
+  justify-content: space-between;
+}
+input[type="radio"] {
+  display: none;
+}
+label {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: hsl(216, 12%, 54%);
+  text-shadow: 20px;
+  transition: 0.3s ease;
+}
+input[type="radio"]:checked + label {
+  background-color: hsl(216, 12%, 54%);
+  color: white;
+  transition: 0.3s ease;
+}
+input[type="radio"]:hover + label {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  transition: 0.6ms ease;
+}
+/* ********** End: Rating Buttons ********** */
+.btn-submit {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-shadow: hsl(216, 12%, 8%);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 49px;
+  transition: 0.3s ease;
+}
+.btn-submit:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+  transition: 0.3s ease;
+}
